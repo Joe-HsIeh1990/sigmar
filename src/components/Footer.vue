@@ -1,12 +1,12 @@
 <template>
   <footer
-    class="footerClass container-fluid bg-dark row justify-content-center mx-0 py-3"
+    class="footerClass container-fluid bg-dark row justify-content-center py-4 mx-0"
   >
     <div class="container-md d-flex  flex-md-row flex-column justify-content-md-between justify-content-center align-items-center">
-      <div class="col-4 text-center">
+      <div class="text-center mb-3 mb-md-0">
         <p class="text-white my-0">&copy;僅個人練習使用，不做任何商業用途</p>
       </div>
-      <div class="col-6 text-center">
+      <div class="text-center">
         <a href="#" @click.prevent="havntdone()">
           <img src="../assets/images/inst.png" class="img-fluid" alt />
         </a>

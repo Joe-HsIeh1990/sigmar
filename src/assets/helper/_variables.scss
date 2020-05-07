@@ -252,8 +252,9 @@ $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 
 $component-active-color:      $dark !default;
+$component-active-color-mystyle:      $white !default;
 $component-active-bg:         theme-color("white") !default;
-$component-active-bg-drop:    theme-color("dark") !default;
+$component-active-bg-mystyle:         theme-color("dark") !default;
 
 $caret-width:                 .3em !default;
 $caret-vertical-align:        $caret-width * .85 !default;
@@ -779,8 +780,8 @@ $dropdown-link-color:               $gray-900 !default;
 $dropdown-link-hover-color:         darken($gray-900, 5%) !default;
 $dropdown-link-hover-bg:            $gray-100 !default;
 
-$dropdown-link-active-color:        $component-active-color !default;
-$dropdown-link-active-bg:           $component-active-bg !default;
+$dropdown-link-active-color:        $component-active-color-mystyle !default;
+$dropdown-link-active-bg:           $component-active-bg-mystyle !default;
 
 $dropdown-link-disabled-color:      $gray-600 !default;
 

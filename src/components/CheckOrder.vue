@@ -1,31 +1,31 @@
 <template >
-  <div class="container-md bg-cart">
-    <div class="pt-5 row justify-content-center">
-      <form class="col-md-6 bgmap" @submit.prevent="payOrder">
+  <div class="bg-cart container-fluid">
+    <div class=" pt-5  row justify-content-center">
+      <form class="col-md-6 py-3 bgmap" @submit.prevent="payOrder">
         <table class="table">
-          <thead class="text-white">
+          <thead class=" text-white">
             <th>品名</th>
             <th>數量</th>
             <th>單價</th>
           </thead>
           <tbody>
-            <tr v-for="item in order.products" :key="item.id" class="text-white">
+            <tr v-for="item in order.products" :key="item.id" class=" text-white">
               <td class="align-middle">{{ item.product.title }}</td>
               <td class="align-middle">{{ item.qty }}/{{ item.product.unit }}</td>
-              <td class="align-middle text-right">{{ item.final_total }}</td>
+              <td class="align-middle">{{ item.final_total }}</td>
             </tr>
           </tbody>
           <tfoot>
             <tr class="text-white">
-              <td colspan="2" class="text-right">總計</td>
-              <td class="text-right">{{ order.total }}</td>
+              <td colspan="2" >總計</td>
+              <td >{{ order.total }}</td>
             </tr>
           </tfoot>
         </table>
 
         <table class="table">
           <tbody class="text-white">
-            <tr>
+            <tr >
               <th width="100">Email</th>
               <td>{{ order.user.email }}</td>
             </tr>
@@ -50,17 +50,15 @@
             </tr>
           </tbody>
         </table>
-        <div class="payfor row justify-content-between">
-          <div class="col-6">
-            <img src="../assets/images/business-and-finance.png" class="img-fluid mr-2" alt />
-            <img src="../assets/images/brands-and-logotypes.png" class="img-fluid mr-2" alt />
-            <img src="../assets/images/business.png" class="img-flui mr-2d" alt />
-            <img src="../assets/images/social-media.png" class="img-fluid mr-2" alt />
-          </div>
-          <div class="text-right col-6">
-            <button class="btn btn-danger mr-2" @click.prevent="backpages()">返回上一頁</button>
-            <button class="btn btn-dark" v-if="order.is_paid === false">確認付款去</button>
-          </div>
+        <div class="payimg ml-2 mb-3">
+          <img src="../assets/images/mastercard.png" class="mr-2" alt="">
+          <img src="../assets/images/jcbcard.png" class="mr-2" alt="">
+          <img src="../assets/images/visacard.png" class="mr-2" alt="">
+          <img src="../assets/images/paypal.png" class="mr-2" alt="">
+        </div>
+        <div class="text-right" >
+          <button class="btn btn-danger mr-2" @click.prevent="backpages()">返回上一頁</button>
+          <button class="btn btn-dark" v-if="order.is_paid === false">確認付款去</button>
         </div>
       </form>
     </div>
@@ -107,17 +105,5 @@ export default {
 };
 </script>
 <style>
-.bg-cart {
-  background: url("../assets/images/4f7a4879df3edd502d7be10aca525b96.jpg")
-    no-repeat center center black;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-}
-.bgmap {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.payfor img{
-  height: 6vh;
-}
+
 </style>

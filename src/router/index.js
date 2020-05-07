@@ -6,10 +6,6 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '*' , 
-    redirect: '/aboutus'
-  },
-  {
     path: '/',
     redirect: '/aboutus',
     name: 'Dashboard',
@@ -24,7 +20,7 @@ const routes = [
         path: 'aboutus',
         name: 'AboutUs',
         component: () => import('../views/AboutUs')
-      },
+      },  
       {
         path: 'costomshop',
         name: 'CostomShop',
@@ -47,8 +43,8 @@ const routes = [
           meta: { requiresAuth: true }
         },
         {
-          path: 'adminorder',
-          name: 'AdminOrder',
+          path:'adminorder',
+          name:'AdminOrder',
           component: () => import('../views/AdminOrder'),
           meta: { requiresAuth: true }
         }
@@ -59,7 +55,7 @@ const routes = [
     name: 'CheckOrder',
     component: () => import('../components/CheckOrder')
   }
-
+ 
 ]
 
 const router = new VueRouter({

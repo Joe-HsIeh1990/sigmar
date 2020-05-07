@@ -197,7 +197,9 @@ export default {
         vm.openitem = false;
         $(".checkbox").slideDown();
       } else {
+        vm.$router.push('/costomshop')
         vm.$bus.$emit("message:push", "請添加購物車內容", "danger");
+        $("#cardmodal").modal("hide");
       }
     },
     closecheck() {

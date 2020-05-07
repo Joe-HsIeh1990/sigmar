@@ -115,10 +115,11 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >頁面</button>
-              <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+              <div class="dropdown-menu pt-0" aria-labelledby="dropdownMenuLink">
                 <a
-                  class="dropdown-item active"
+                  class="dropdown-item dropdown-active"
                   v-for="pages in filterData.length"
+                  :class="{active: currentPage === pages - 1}"
                   @click.prevent="currentPage = pages -1 "
                   :key="pages"
                   href="#"
@@ -185,6 +186,7 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
+import "popper.js"
 import $ from "jquery";
 export default {
   data() {

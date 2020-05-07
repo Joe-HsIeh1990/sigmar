@@ -24,7 +24,7 @@
         <ShoppingCart />
       </div>
     </div>
-    <Footer />
+    <Footer class="mr-0" />
   </div>
 </template>
 <script>
