@@ -107,7 +107,7 @@
                 </li>
               </ul>
             </nav>
-            <div class="dropup my-2" v-if="pagemoble">
+            <div class="drop my-2" v-if="pagemoble">
               <button
                 type="button"
                 class="btn btn-dark dropdown-toggle"
