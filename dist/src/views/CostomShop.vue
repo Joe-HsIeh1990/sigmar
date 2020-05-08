@@ -107,7 +107,7 @@
                 </li>
               </ul>
             </nav>
-            <div class="dropup my-2" v-if="pagemoble">
+            <div class="dropup mb-2" v-if="pagemoble">
               <button
                 type="button"
                 class="btn btn-dark dropdown-toggle"
@@ -115,7 +115,7 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >頁面</button>
-              <div class="dropdown-menu py-0" aria-labelledby="dropdownMenuLink">
+              <div class="dropdown-menu pt-0" aria-labelledby="dropdownMenuLink">
                 <a
                   class="dropdown-item dropdown-active"
                   v-for="pages in filterData.length"

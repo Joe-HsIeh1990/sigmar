@@ -1,0 +1,15 @@
+*{
+    outline: none;
+  }
+:focus,input::-moz-focus-inner, button::-moz-focus-inner{
+    outline: 0;
+ }
+.modal-open {
+  overflow-y: scroll;
+  padding-right: 0 !important;
+}
+button{
+  outline:none;
+  }
+  
+//Dashboard

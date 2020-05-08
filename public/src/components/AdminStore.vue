@@ -25,6 +25,12 @@
             </li>
           </router-link>
         </ul>
+        <ul class="nav flex-md-column mb-5">
+          <li class="nav-item text-center">
+            <i class="fas fa-box-open"></i>
+            優惠卷
+          </li>
+        </ul>
         <div class="d-flex justify-content-center">
           <div>
             <button @click="signout" class="m-auto">登出</button>
