@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="container-md" id="timestory">
+      <!-- 抬頭圖片 -->
       <div class="row justify-content-center align-items-center my-4">
         <div class="col-md-9">
           <a href>
@@ -8,6 +9,7 @@
           </a>
         </div>
       </div>
+      <!-- 選單 -->
       <div class="my-3 d-flex justify-content-center container-md px-0" id="btn-flxed">
         <select
           name="mod"
@@ -28,6 +30,7 @@
           >西格瑪時代</li>
         </ul>
       </div>
+      <!-- 神話時代 -->
       <div class="container-md pt-2 pb-3" id="godtime" v-if="change === 'a'">
         <div class="text-center my-5" id="god">
           <h2 class="text-warning">神話時代</h2>
@@ -91,6 +94,7 @@
           </div>
         </div>
       </div>
+      <!-- 混沌時代 -->
       <div class="container-md pt-2 pb-3" id="chosetime" v-if="change === 'b'">
         <div class="text-center my-5" id="chose">
           <h2 class="text-danger">混沌時代</h2>
@@ -172,6 +176,7 @@
           </div>
         </div>
       </div>
+      <!-- 西格瑪時代 -->
       <div class="container-md pt-2 pb-3" id="sigmartime" v-if="change === 'c'">
         <div class="text-center my-5" id="sigmar">
           <h2>西格瑪時代</h2>

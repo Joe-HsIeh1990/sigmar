@@ -60,7 +60,7 @@
                 alt="..."
               />
               <div class="card-body">
-                <p class="card-text">2018年，於戰鎚終焉之時亞洲盃中奪冠，並設立此平台,專營中古戰鎚模型。</p>
+                <p class="card-text">2018年，並設立此平台,專營中古戰鎚模型。</p>
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@
     <div class="text-right mt-4">
       <button class="btn btn-primary" @click="openModal(true)">建立新商品</button>
     </div>
+    <!-- 商品列表 -->
     <table class="table mt-4">
       <thead>
         <tr>
@@ -66,6 +67,7 @@
         </li>
       </ul>
     </nav>
+    <!-- 新增、編輯產品 -->
     <div
       class="modal fade"
       id="productModal"
@@ -219,6 +221,7 @@
         </div>
       </div>
     </div>
+    <!-- 刪除產品 -->
     <div
       class="modal fade"
       id="delProductModal"
@@ -321,14 +324,12 @@ export default {
         } else {
           $("#productModal").modal("hide");
           vm.getProducts();
-          console.log("新增失敗");
         }
 
       });
     },
     uploadFile() {
-      console.log(this);
-      const uploadedFile = this.$refs.files.files[0]; //帶入剛剛在網頁檢查內的refs.files.files[0]的內容
+      const uploadedFile = this.$refs.files.files[0];
       const vm = this;
       const formData = new FormData();
       formData.append("file-to-upload", uploadedFile);

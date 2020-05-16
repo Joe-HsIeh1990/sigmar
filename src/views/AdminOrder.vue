@@ -60,7 +60,6 @@ export default {
         vm.orders = response.data.orders;
         vm.pagination = response.data.pagination;
         vm.isLoading = false;
-        console.log(response);
       });
     },
   },
@@ -68,7 +67,6 @@ export default {
     sortOrder() {
       const vm = this;
       let newOrder = [];
-      console.log(vm.orders.length)
       if (vm.orders.length) {
         newOrder = vm.orders.sort((a, b) => {
           const aIsPaid = a.is_paid ? 1 : 0;
@@ -81,7 +79,6 @@ export default {
   },
   created() {
     this.getOrders();
-    console.log(process.env.VUE_APP_APIPATH);
   },
 };
 </script>

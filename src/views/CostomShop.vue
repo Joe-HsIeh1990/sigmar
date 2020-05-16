@@ -1,15 +1,18 @@
 <template>
   <div class="container-fluid my-5" id="costomshop">
     <div class="row m-4 justify-content-center">
+      <!-- 選單 -->
       <div class="row col-md-3 justify-content-start align-items-center select-items">
         <div
           class="d-flex flex-column justify-content-center align-items-center my-3 text-light bod"
         >
+        <!-- 秩序陣營 -->
           <div id="TheOrderSide" @click.prevent="DwrapDown">
             <h3>
               <a href="#" data-rol="order" class="text-decoration-none text-light">+ 秩序陣營</a>
             </h3>
           </div>
+          <!-- 秩序陣營 chackbox -->
           <form action method id="OrderSide">
             <ul class="d-flex flex-column justify-content-center align-items-center p-0">
               <li v-for="order in orderside" :key="order.zoe" class="my-2">
@@ -23,11 +26,13 @@
               </li>
             </ul>
           </form>
+          <!-- 死亡陣營 -->
           <div id="TheDeathSide" @click.prevent="DwrapDown">
             <h3>
               <a href="#" data-rol="death" class="text-decoration-none text-light">+ 死亡陣營</a>
             </h3>
           </div>
+          <!-- 死亡陣營 chackbox -->
           <form action method id="DeathSide">
             <ul class="d-flex flex-column justify-content-center align-items-center p-0">
               <li v-for="death in deathside" :key="death.zoe" class="my-2">
@@ -36,11 +41,13 @@
               </li>
             </ul>
           </form>
+          <!-- 混沌陣營 -->
           <div id="TheChaosSide" @click.prevent="DwrapDown">
             <h3>
               <a href="#" data-rol="chaos" class="text-decoration-none text-light">+ 混沌陣營</a>
             </h3>
           </div>
+          <!-- 混沌陣營 chackbox -->
           <form action method id="ChaosSide">
             <ul class="d-flex flex-column justify-content-center align-items-center p-0">
               <li v-for="chaos in chaoseside" :key="chaos.zoe" class="my-2">
@@ -51,6 +58,7 @@
           </form>
         </div>
       </div>
+      <!-- 商品列表 -->
       <div class="row col-md-9 justify-content-start align-items-center shop-item">
         <div
           class="d-flex flex-column justify-content-center align-items-center  my-3 text-light bod-item"
@@ -86,8 +94,8 @@
                   </div>
                 </div>
               </div>
-
             </div>
+            <!-- 分頁 -->
             <nav class="my-5" aria-label="Page navigation example" v-if="pagerwd">
               <ul class="pagination justify-content-center">
                 <li
@@ -100,6 +108,7 @@
                 </li>
               </ul>
             </nav>
+            <!-- 手機板分頁 -->
             <div class="drop my-2" v-if="pagemoble">
               <button
                 type="button"
@@ -123,6 +132,7 @@
         </div>
       </div>
     </div>
+    <!-- 商品card -->
     <div
       class="modal fade"
       id="ProductModel"
@@ -375,6 +385,7 @@ input {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .bod-item {
+
   height: 100%;
   border: 1px solid black;
   background-color: rgba(0, 0, 0, 0.8);
@@ -387,6 +398,7 @@ input {
   border: 1px outset #000;
 }
 .items-here {
+  width: 98%;
   background: #eee;
 }
 .card {
@@ -432,13 +444,9 @@ input {
 
 @media (max-width: 576px) {
   .card {
-    width: 50%;
+    width: 100%;
   }
 }
-@media (max-width: 414px) {
-  .card {
-    width: 60%;
-  }
-}
+
 
 </style>
