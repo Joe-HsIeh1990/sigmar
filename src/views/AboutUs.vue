@@ -1,26 +1,28 @@
 <template>
   <div>
-    <div class="container-md px-3 py-2 mt-5" id="abc">
+    <!-- about -->
+    <div class="container-md px-3 py-2 mt-5 " id="about">
+      <!-- about title -->
       <div
-        class="row text-center text-light justify-content-center align-items-center my-3"
-        id="abc-title"
+        class="row text-center text-light justify-content-center align-items-center my-3 about-title"
       >
         <div class="col-md-2">
-          <img src="../assets/images/White-Warhammerlogo.png" class="uslogo" alt />
+          <img src="../assets/images/White-Warhammerlogo.png"  alt />
         </div>
         <div class="col-md-6">
           <h1>戰鎚西格瑪時代戰棋專賣店</h1>
         </div>
       </div>
+      <!-- slider -->
       <div class="container-md">
         <div id="slider">
           <img src="../assets/images/AoSCommandAbility-May18-Freeguild5eg.jpg" class="imge" />
           <img src="../assets/images/Welcome-To-AoS-2019-10-12-Portal-All-bm.jpg" class="imge" />
         </div>
       </div>
+      <!-- ------ -->
       <div
         class="d-flex flex-column flex-md-row justify-content-center align-items-center mx-auto py-5"
-        id="hobit"
       >
         <div class="col-md-2 col-6 text-center">
           <img src="../assets/images/nav-item-death.png" class="img-fluid" alt />
@@ -45,41 +47,33 @@
           <h2 class="text-light text-center">戰鎚西格瑪時代戰棋成長史</h2>
         </div>
       </div>
+      <!-- pagechange -->
       <div class="d-flex flex-column align-items-center">
         <div class="row justify-content-center mt-5 text-center text-dark">
-          <button class="col-4 pagechange rounded-left" @click.prevent="link = 'a'">2018</button>
-          <button class="col-4 pagechange" @click.prevent="link = 'b'">2019</button>
-          <button class="col-4 pagechange rounded-right" @click.prevent="link = 'c'">2020</button>
+          <button class="col-6 pagechange rounded-left" @click.prevent="link = 'a'">2019</button>
+          <button class="col-6 pagechange rounded-right" @click.prevent="link = 'b'">2020</button>
         </div>
         <div class="mb-5">
           <div v-if="link === 'a'">
-            <div class="card" id="changemy">
+            <div class="card">
               <img
                 src="../assets/images/1313154033-e4d8101ae91bfe37f4e8f9ab5297994f_n.jpg"
-                class="card-img-top img-h"
+                class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <p class="card-text">2018年，並設立此平台,專營中古戰鎚模型。</p>
+                <p class="card-text">2019年，並設立此平台,專營中古戰鎚模型。</p>
               </div>
             </div>
           </div>
           <div v-else-if="link === 'b'">
-            <div class="card" id="changemy">
+            <div class="card">
               <img src="../assets/images/oc.jpg" class="card-img-top img-h" alt="..." />
               <div class="card-body">
-                <p class="card-text">2019年，因應官方全面改版下架終焉之時後，引入最新版西格瑪時代。</p>
+                <p class="card-text">2020年，因應官方全面改版下架終焉之時後，引入最新版西格瑪時代。</p>
               </div>
             </div>
-          </div>
-          <div v-else-if="link === 'c'">
-            <div class="card" id="changemy">
-              <img src="../assets/images/echsenarmee.jpg" class="card-img-top img-h" alt="..." />
-              <div class="card-body">
-                <p class="card-text">2020年，與實體店面進行合作，並整合相關資訊。</p>
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

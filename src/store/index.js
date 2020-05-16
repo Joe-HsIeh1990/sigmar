@@ -126,20 +126,6 @@ export default new Vuex.Store({
         context.commit('ISLOADING', false);
       });
     },
-    // getOrder() {
-    //   const url = `${process.env.VUE_APP_APIPATH}api/${process.env.VUE_APP_COSTOM}/order/${state.orderId}`;
-    //   axios.get(url).then((response) => {
-    //     context.commit('ORDER', response.data.order)
-    //   });
-    // },
-    // payOrder() {
-    //   const url = `${process.env.VUE_APP_APIPATH}api/${process.env.VUE_APP_COSTOM}/pay/${state.orderId}`;
-    //   axios.post(url).then((response) => {
-    //     if (response.data.success) {
-    //       context.dispatch('getOrder');
-    //     }
-    //   });
-    // },
   },
   getters: {
     products(state) {

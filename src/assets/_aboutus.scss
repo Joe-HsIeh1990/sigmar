@@ -1,23 +1,22 @@
-#abc {
+  #about {
     background-color: rgba(0, 0, 0, 0.8);
   }
-  #abc p {
+  #about p {
     color: white;
     font-size: 18px;
   }
   #abc-title {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
   }
-  .uslogo {
-    max-width: 130px;
-    max-height: 130px;
+  #about .about-title img{
+    width: 50%;
   }
   #slider {
     height: 200px;
     width: 80vw;
     margin: auto;
   }
-  .imge {
+  #slider img {
     height: 200px;
   }
   #pagechange {
@@ -35,32 +34,27 @@
     transform: translate(-5px, -5px);
     transition: 0.5s;
   }
-  #changemy {
+  .card {
     background-color: rgb(27, 27, 27);
     width: 70vw;
   }
-  .img-h {
-    height: 20vh;
+  .card img {
+    height: 50%;
   }
   
   @media (min-width: 768px) {
     #slider {
       height: 90%;
       width: 90%;
-      margin: auto;
     }
-    .imge {
-      height: 450px;
+    #slider img {
+      height: 100%;
     }
-    #changemy {
+    .card {
       background-color: rgb(27, 27, 27);
-      width: 40vw;
+      width: 100%;
     }
-    .img-h {
-      height: 40vh;
-    }
-    #hobit {
-      margin-top: 100px;
-      margin-bottom: 140px;
+    .card img {
+      height: 50%;
     }
   }
