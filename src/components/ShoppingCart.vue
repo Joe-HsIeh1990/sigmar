@@ -78,7 +78,7 @@
                   <label for="username">收件人姓名</label>
                   <ValidationProvider
                     name="姓名"
-                    rules="required|alpha"
+                    rules="required"
                     v-slot="{ errors , classes }"
                   >
                     <div :class="classes">
@@ -99,7 +99,7 @@
                   <label for="usertel">收件人電話</label>
                   <ValidationProvider
                     name="手機號碼"
-                    rules="required|phone:10"
+                    rules="required|phone"
                     v-slot="{ errors , classes}"
                   >
                     <div :class=" classes">
@@ -119,7 +119,7 @@
                   <label for="useraddress">收件人地址</label>
                   <ValidationProvider
                     name="地址"
-                    rules="required|addres:7"
+                    rules="required|addres:3"
                     v-slot="{ errors , classes }"
                   >
                     <div :class="classes">

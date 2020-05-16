@@ -172,3 +172,66 @@ li {
   right: 50%;
   bottom: 0;
 }
+@media (max-width: 768px){
+  #sigmar h2::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    border: 1px inset #4caacf;
+    left: 0;
+    top: 20px;
+    background-color: #4caacf;
+  }
+  #sigmar h2::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    border: 1px inset #4caacf;
+    right: 0;
+    top: 20px;
+    background-color: #4caacf;
+  }
+  #chose h2::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    border: 1px inset #960a00;
+    left: 0;
+    top: 20px;
+    background-color: #960a00;
+  }
+  #chose h2::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    border: 1px inset #960a00;
+    right: 0;
+    top: 20px;
+    background-color: #960a00;
+  }
+  #god h2::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    border: 1px inset #ffe75e;
+    left: 0;
+    top: 20px;
+    background-color: #ffe75e;
+  }
+  #god h2::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    border: 1px inset #ffe75e;
+    right: 0;
+    top: 20px;
+    background-color: #ffe75e;
+  }
+
+}

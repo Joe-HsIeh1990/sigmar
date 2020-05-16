@@ -47,10 +47,10 @@ extend('required', {
 })
 extend('phone', {
   validate (value, args) {
-    return value.length >= args.length
+    return value.length ==10 && /^((09)[0-9]{1}\d{7})$/.test(value)
   },
   params: ['length'],
-  message: '請輸入正確手機號碼10位數'
+  message: '請輸入正確手機號碼10位數，例:0912345678'
 })
 extend('addres', {
   validate (value, addres) {

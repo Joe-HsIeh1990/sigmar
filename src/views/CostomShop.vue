@@ -1,10 +1,9 @@
 <template>
   <div class="container-fluid my-5" id="costomshop">
     <div class="row m-4 justify-content-center">
-      <div class="row col-md-3 justify-content-start align-items-center" id="select-items">
+      <div class="row col-md-3 justify-content-start align-items-center select-items">
         <div
-          class="d-flex flex-column justify-content-center align-items-center col-md-9 my-3 text-light"
-          id="bod"
+          class="d-flex flex-column justify-content-center align-items-center my-3 text-light bod"
         >
           <div id="TheOrderSide" @click.prevent="DwrapDown">
             <h3>
@@ -52,22 +51,16 @@
           </form>
         </div>
       </div>
-      <div class="row col-md-9 justify-content-start align-items-center" id="shop-item">
+      <div class="row col-md-9 justify-content-start align-items-center shop-item">
         <div
-          class="d-flex flex-column justify-content-center align-items-center col-md-12 my-3 text-light"
-          id="bod-item"
+          class="d-flex flex-column justify-content-center align-items-center  my-3 text-light bod-item"
         >
-          <div
-            class="d-flex flex-column justify-content-center align-items-center my-5"
-            id="items-here"
-          >
+          <div class="d-flex flex-column justify-content-center align-items-center my-5 items-here">
             <div class="my-4">
               <h2 class="text-dark text-center font-weight-bold">商品列表</h2>
             </div>
             <div class="line-of-item"></div>
-            <div class="d-flex flex-wrap my-4 justify-content-center col-12">
-              <!-- cart -->
-              <!-- <div class="d-flex flex-wrap justify-content-center"> -->
+            <div class="d-flex flex-wrap my-4 justify-content-center">
               <div
                 class="card my-2 mx-1 cart-shadow"
                 v-for="items in filterData[currentPage]"
@@ -93,7 +86,7 @@
                   </div>
                 </div>
               </div>
-              <!-- </div> -->
+
             </div>
             <nav class="my-5" aria-label="Page navigation example" v-if="pagerwd">
               <ul class="pagination justify-content-center">
@@ -186,7 +179,7 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import "popper.js"
+import "popper.js";
 import $ from "jquery";
 export default {
   data() {
@@ -218,7 +211,7 @@ export default {
         }
       ],
       deathside: [
-        { name: "食屍鬼貴族", zoe: "Flesh-Eater", title: "e", checked: false },
+        { name: "食屍鬼貴族", zoe: "Flesh-Eater", title: "e", checked: false }
         // {
         //   name: "納加什軍團",
         //   zoe: "LegionsOfNagash",
@@ -240,8 +233,7 @@ export default {
       currentPage: 0,
       checkedNames: [],
       pagerwd: true,
-      pagemoble: false,
-     
+      pagemoble: false
     };
   },
   methods: {
@@ -358,6 +350,7 @@ a {
 h3 {
   margin-bottom: 20px;
   margin-top: 20px;
+  white-space: nowrap;
 }
 label {
   font-size: 20px;
@@ -370,19 +363,22 @@ input {
   height: 100%;
   position: relative;
 }
-#shop-item,
-#select-items {
+.shop-item,
+.select-items {
   height: 100%;
+
 }
-#bod {
+.bod {
+  padding: 0 5%;
   height: 100%;
   border: 1px solid black;
   background-color: rgba(0, 0, 0, 0.8);
 }
-#bod-item {
+.bod-item {
   height: 100%;
   border: 1px solid black;
   background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
 }
 .line-of-item {
   width: 96.5%;
@@ -390,19 +386,59 @@ input {
   background: #363636;
   border: 1px outset #000;
 }
-#items-here {
+.items-here {
   background: #eee;
-  width: 95%;
 }
 .card {
-  width: 100%;
+  width: 20%;
 }
 .cart-shadow {
   box-shadow: 2px 2px 2px #000;
 }
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
+  .card{
+    width: 40%;
+  }
+   .select-items{
+    margin-right: 10px;
+  }
+  
+}
+@media (max-width: 768px) {
+  h3 {
+    white-space: nowrap;
+  }
+  .bod {
+  padding: 0;
+  height: 100%;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.8);
+  }
   .card {
-    width: 20%;
+    width: 40%;
   }
 }
+@media (max-width: 767px){
+  .select-items{
+    margin: 0 auto;
+  }
+  .bod {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 50%;
+  }
+}
+@media (max-width: 414px) {
+  .card {
+    width: 60%;
+  }
+}
+
 </style>
